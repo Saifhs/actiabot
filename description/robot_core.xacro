@@ -38,7 +38,7 @@
                 <geometry>
                     <box size="0.3 0.3 0.15"/>
                 </geometry>
-                <material name="white"/>
+                <material name="blue"/>
             </visual>
             <collision>
                 <origin xyz="0.15 0 0.075"/>
@@ -52,6 +52,9 @@
 
            
         </link>
+        <gazebo reference="chassis">
+            <material>Gazebo/Blue</material>
+        </gazebo>
 
           <!-- LEFT WHEEL LINK -->
 
@@ -67,7 +70,7 @@
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
             </geometry>
-            <material name="blue"/>
+            <material name="black"/>
         </visual>
         <collision>
             <geometry>
@@ -80,6 +83,9 @@
 
         
     </link>
+    <gazebo reference="left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
 
             <!-- RIGHT WHEEL LINK -->
 
@@ -95,7 +101,7 @@
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
             </geometry>
-            <material name="blue"/>
+            <material name="black"/>
         </visual>
         <collision>
             <geometry>
@@ -107,6 +113,9 @@
         </xacro:inertial_cylinder>
  
     </link>
+    <gazebo reference="right_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
 
       <!-- CASTER WHEEL LINK -->
 
@@ -122,7 +131,7 @@
             <geometry>
                 <sphere radius="0.05"/>
             </geometry>
-            <material name="black"/>
+            <material name="white"/>
         </visual>
         <collision>
             <geometry>
@@ -134,6 +143,11 @@
         </xacro:inertial_sphere>
         
     </link>
+    <gazebo reference="caster_wheel">
+        <material>Gazebo/White</material>
+        <mu1 value="0.001"/>
+        <mu2 value="0.001"/>
+    </gazebo>
 
 
 
